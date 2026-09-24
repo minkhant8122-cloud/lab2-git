@@ -8,6 +8,16 @@ int main(int argc, char **argv)
     fgets(name, 255, stdin);
     printf("length = %d\n", strlen(name)); /* debug line */
     name[strlen(name)-1] = '\0';
-    printf("Hello %s!\n", MinKhant);
+    printf("Hello %s!\n", first,last);
+
+    char first[255], last[255];
+    printf("Enter your first name: ");
+    fgets(first, 255, stdin);
+    first[strlen(first)-1] = '\0';
+
+    printf("Now enter your last name: ");
+    gets(last);
+
+    printf("Hello %s %s!\n", first, last);
     return 0;
 }
